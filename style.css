@@ -29,6 +29,20 @@
 
 }
 
+/* ::-webkit-scrollbar{
+    height: 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--secon-bg-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--hover-color);
+    border-radius: 5rem;
+} */
+
 body{
     font-family: "Poppins",sans-serif;
     background-color: var(--bg-color);
@@ -175,7 +189,7 @@ btn-box{
     height: 45px;
 }
 
-.btn-box a.btn{
+.btn-box .btn{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -192,7 +206,7 @@ btn-box{
     z-index: 1;
     border:  2px solid var(--hover-color);
 }
-a.btn:hover{
+.btn:hover{
     color: var(--hover-color);
 }
 
@@ -208,20 +222,20 @@ a.btn:hover{
     transition: .4s;
 }
 
-a.btn:hover::before{
+.btn:hover::before{
     width: 100%;
 }
 
-a.btn:nth-child(2){
+.btn:nth-child(2){
     background: var(--bg-color);
     color: var(--hover-color);
 }
 
-a.btn:nth-child(2):hover{
+.btn:nth-child(2):hover{
     color: var(--bg-color);
 }
 
-a.btn:nth-child(2)::before{
+.btn:nth-child(2)::before{
     background: var(--hover-color);
 }
 
@@ -657,6 +671,82 @@ img-box{
 
 .port-content a i{
     font-size: 1.3rem;
+    color: var(--secon-bg-color);
+}
+
+
+/* contact section */
+
+.contact{
+    background: var(--bg-color);
+    width: 100%;
+}
+
+.contact form {
+    max-width: 50rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    color: var(--text-color);
+    background: var(--secon-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+} 
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.formBtn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.formBtn .btn{
+   cursor: pointer;
+   font-size: 1rem;
+}
+
+
+/* footer section */
+
+footer{
+    padding: 1rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--secon-bg-color);
+}
+
+footer a{
+    display: inline-flex;
+    justify-content: center;
+    color: var(--text-color);
+    background: var(--hover-color);
+    padding: .6rem;
+    border-radius: 5px;
+    margin-left: 1250px;
+}
+
+footer a i{
+    font-size: 1rem;
     color: var(--secon-bg-color);
 }
 
