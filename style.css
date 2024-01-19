@@ -948,6 +948,9 @@ footer a i{
      html{
         font-size: 80%;
      }
+     #menu-icon{
+        margin-right: 50px;
+     }
      footer p{
         font-size: .6rem;
      }
