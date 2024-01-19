@@ -362,16 +362,16 @@
         <h2>Contact Me!</h2>
     </div>
 
-    <form action="#" class="scroll-bottom">
+    <form name= "submit-to-google-sheet" action="#" class="scroll-bottom">
         <div class="input-box">
             <input type="text" name="Name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="email" name="Email" placeholder="Email Address" required>
         </div>
         <div class="input-box">
             <input type="number" name="Num" placeholder="Mobile Number" required>
-            <input type="text" name="Message" placeholder="Email Subject" required>
+            <input type="text" name="subject" placeholder="Email Subject" required>
         </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
         <div class="btn-box formBtn">
             <button type="submit" class="btn">Send Message</button>
         </div>
@@ -388,5 +388,17 @@
 
      <script src="mixitup.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyx2hUlUSLitiCdenL1Co7h4SEIkG4QDVES-Bzr0HGAtaHVLqawHwRwNkrxaU49xMQH/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
