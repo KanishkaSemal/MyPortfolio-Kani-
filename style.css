@@ -894,6 +894,20 @@ footer a i{
             .social-icons{
                 margin-top: 2rem;
             }
+
+              #menu-icon {
+               margin-right: 50px;
+            }  
+            .about-content {
+                margin-right: 80px;
+                
+            }   
+            .image1 img {
+                top: 30px;
+                width: 100%;
+              
+            }  
+            
 }
 
 @media(max-width:768px) {
@@ -951,6 +965,7 @@ footer a i{
          footer p{
              font-size: .7rem;
          }
+        
 }
 
 @media(max-width:420pxpx) {
@@ -977,7 +992,12 @@ footer a i{
      .about-img p{
         font-size: 1rem;
      }
-
+     .glowing-circle .image1 {
+       width: 100%;
+     }
+     .fillter-buttons .button{
+        font-size: .6rem;
+     }
 
 }
 
